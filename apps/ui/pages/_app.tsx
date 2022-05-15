@@ -1,16 +1,21 @@
 import { AppProps } from 'next/app';
-import Head from 'next/head';
+import { createGlobalStyle } from 'styled-components';
 import './styles.css';
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #343d4b;
+    font-family: 'Montserrat', sans-serif;
+  }
+`;
 
 function CustomApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Head>
-        <title>Welcome to ui!</title>
-      </Head>
-      <main className="app">
-        <Component {...pageProps} />
-      </main>
+      <GlobalStyle />
+      <Component {...pageProps} />
     </>
   );
 }
