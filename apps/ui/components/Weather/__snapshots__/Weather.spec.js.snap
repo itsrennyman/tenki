@@ -1,0 +1,144 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly 1`] = `
+<div
+  className="sc-dkzDqf sjHdb sc-hKMtZM iDEdbU"
+  data-testid="weather"
+>
+  <div
+    className="sc-gKXOVf faSDAV"
+  >
+    <p
+      className="sc-gsnTZi dMDXBD"
+    >
+      Monday
+    </p>
+    <div>
+      <p
+        className="sc-gsnTZi dMDXBD"
+      >
+        Milan, Italy
+      </p>
+      <p
+        className="sc-gsnTZi hpRlyT"
+        fontSize="4em"
+        fontWeight={700}
+      >
+        25
+        °C
+      </p>
+      <p
+        className="sc-gsnTZi bNdsjf"
+        fontSize="1em"
+        fontWeight={600}
+      >
+        Sunny
+      </p>
+    </div>
+  </div>
+  <div
+    className="sc-jSMfEi iLuUAL"
+  >
+    <div
+      className="sc-bczRLJ dWSqhE"
+      direction="column"
+    >
+      <div
+        className="sc-bczRLJ kwAZZz"
+      >
+        <dt
+          className="sc-gsnTZi fZUnuw"
+          fontWeight={700}
+        >
+          Wind
+        </dt>
+        <dd
+          className="sc-gsnTZi dMDXBD"
+        >
+          10km/h
+        </dd>
+      </div>
+      <div
+        className="sc-bczRLJ kwAZZz"
+      >
+        <dt
+          className="sc-gsnTZi fZUnuw"
+          fontWeight={700}
+        >
+          Humidity
+        </dt>
+        <dd
+          className="sc-gsnTZi dMDXBD"
+        >
+          60%
+        </dd>
+      </div>
+      <div
+        className="sc-bczRLJ kwAZZz"
+      >
+        <dt
+          className="sc-gsnTZi fZUnuw"
+          fontWeight={700}
+        >
+          Pressure
+        </dt>
+        <dd
+          className="sc-gsnTZi dMDXBD"
+        >
+          1025mb
+        </dd>
+      </div>
+      <div
+        className="sc-bczRLJ kwAZZz"
+      >
+        <dt
+          className="sc-gsnTZi fZUnuw"
+          fontWeight={700}
+        >
+          Sunrise
+        </dt>
+        <dd
+          className="sc-gsnTZi dMDXBD"
+        >
+          6:00am
+        </dd>
+      </div>
+      <div
+        className="sc-bczRLJ kwAZZz"
+      >
+        <dt
+          className="sc-gsnTZi fZUnuw"
+          fontWeight={700}
+        >
+          Sunset
+        </dt>
+        <dd
+          className="sc-gsnTZi dMDXBD"
+        >
+          6:00pm
+        </dd>
+      </div>
+      <div
+        className="sc-bczRLJ kwAZZz"
+      >
+        <dt
+          className="sc-gsnTZi fZUnuw"
+          fontWeight={700}
+        >
+          Geo coords
+        </dt>
+        <dd
+          className="sc-gsnTZi dMDXBD"
+        >
+          45.465,12.234
+        </dd>
+      </div>
+    </div>
+    <button
+      className="sc-eCYdqJ iYktgg"
+    >
+      Reload Data!
+    </button>
+  </div>
+</div>
+`;
