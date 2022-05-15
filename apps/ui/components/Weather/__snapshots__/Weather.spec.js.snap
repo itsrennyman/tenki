@@ -2,25 +2,25 @@
 
 exports[`should render correctly 1`] = `
 <div
-  className="sc-dkzDqf sjHdb sc-hKMtZM iDEdbU"
+  className="sc-hKMtZM eiqwmw sc-eCYdqJ ktzijR"
   data-testid="weather"
 >
   <div
-    className="sc-gKXOVf faSDAV"
+    className="sc-iBkjds iJWbDD"
   >
     <p
-      className="sc-gsnTZi dMDXBD"
+      className="sc-dkzDqf cqLQeI"
     >
       Monday
     </p>
     <div>
       <p
-        className="sc-gsnTZi dMDXBD"
+        className="sc-dkzDqf cqLQeI"
       >
         Milan, Italy
       </p>
       <p
-        className="sc-gsnTZi hpRlyT"
+        className="sc-dkzDqf brehns"
         fontSize="4em"
         fontWeight={700}
       >
@@ -28,7 +28,7 @@ exports[`should render correctly 1`] = `
         °C
       </p>
       <p
-        className="sc-gsnTZi bNdsjf"
+        className="sc-dkzDqf fgcoac"
         fontSize="1em"
         fontWeight={600}
       >
@@ -37,7 +37,7 @@ exports[`should render correctly 1`] = `
     </div>
   </div>
   <div
-    className="sc-jSMfEi iLuUAL"
+    className="sc-gKXOVf OOeIB"
   >
     <div
       className="sc-bczRLJ dWSqhE"
@@ -47,13 +47,13 @@ exports[`should render correctly 1`] = `
         className="sc-bczRLJ kwAZZz"
       >
         <dt
-          className="sc-gsnTZi fZUnuw"
+          className="sc-dkzDqf gHxGtr"
           fontWeight={700}
         >
           Wind
         </dt>
         <dd
-          className="sc-gsnTZi dMDXBD"
+          className="sc-dkzDqf cqLQeI"
         >
           10km/h
         </dd>
@@ -62,13 +62,13 @@ exports[`should render correctly 1`] = `
         className="sc-bczRLJ kwAZZz"
       >
         <dt
-          className="sc-gsnTZi fZUnuw"
+          className="sc-dkzDqf gHxGtr"
           fontWeight={700}
         >
           Humidity
         </dt>
         <dd
-          className="sc-gsnTZi dMDXBD"
+          className="sc-dkzDqf cqLQeI"
         >
           60%
         </dd>
@@ -77,13 +77,13 @@ exports[`should render correctly 1`] = `
         className="sc-bczRLJ kwAZZz"
       >
         <dt
-          className="sc-gsnTZi fZUnuw"
+          className="sc-dkzDqf gHxGtr"
           fontWeight={700}
         >
           Pressure
         </dt>
         <dd
-          className="sc-gsnTZi dMDXBD"
+          className="sc-dkzDqf cqLQeI"
         >
           1025mb
         </dd>
@@ -92,13 +92,13 @@ exports[`should render correctly 1`] = `
         className="sc-bczRLJ kwAZZz"
       >
         <dt
-          className="sc-gsnTZi fZUnuw"
+          className="sc-dkzDqf gHxGtr"
           fontWeight={700}
         >
           Sunrise
         </dt>
         <dd
-          className="sc-gsnTZi dMDXBD"
+          className="sc-dkzDqf cqLQeI"
         >
           6:00am
         </dd>
@@ -107,13 +107,13 @@ exports[`should render correctly 1`] = `
         className="sc-bczRLJ kwAZZz"
       >
         <dt
-          className="sc-gsnTZi fZUnuw"
+          className="sc-dkzDqf gHxGtr"
           fontWeight={700}
         >
           Sunset
         </dt>
         <dd
-          className="sc-gsnTZi dMDXBD"
+          className="sc-dkzDqf cqLQeI"
         >
           6:00pm
         </dd>
@@ -122,20 +122,20 @@ exports[`should render correctly 1`] = `
         className="sc-bczRLJ kwAZZz"
       >
         <dt
-          className="sc-gsnTZi fZUnuw"
+          className="sc-dkzDqf gHxGtr"
           fontWeight={700}
         >
           Geo coords
         </dt>
         <dd
-          className="sc-gsnTZi dMDXBD"
+          className="sc-dkzDqf cqLQeI"
         >
           45.465,12.234
         </dd>
       </div>
     </div>
     <button
-      className="sc-eCYdqJ iYktgg"
+      className="sc-jSMfEi PCDIE"
     >
       Reload Data!
     </button>

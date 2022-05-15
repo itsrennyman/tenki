@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import { Flex } from '../Flex';
+import { Ripple } from '../Ripple';
 import { Text } from '../Text';
-import { WeatherProps } from './Weather.props';
+import { WeatherInfoProps, WeatherProps } from './Weather.props';
 import { StyledWeather } from './Weather.styled';
 
 const Button = styled.button`
@@ -18,9 +19,14 @@ const Button = styled.button`
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 
-  &:hover {
+  &:hover:enabled {
     background-color: rgb(0 0 0 / 30%);
     transform: scale(1.02);
+  }
+
+  &:disabled {
+    background-color: rgb(0 0 0 / 10%);
+    cursor: not-allowed;
   }
 `;
 
@@ -28,10 +34,12 @@ const Informations = styled.div`
   display: flex;
   flex: 1.1;
   flex-direction: column;
+  gap: 2rem;
+  overflow-y: scroll;
   padding: 35px;
 `;
 
-const WeatherSide = styled.div`
+const Picture = styled.div`
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -54,21 +62,40 @@ const WeatherSide = styled.div`
   }
 `;
 
-const Weather = ({ data = [], ...props }: WeatherProps) => {
-  const informations = data.map((el, index) => {
-    return (
-      <Flex key={index} justifyContent="space-between">
-        <Text as="dt" textTransform="uppercase" fontWeight={700}>
-          {el.label}
-        </Text>
-        <Text as="dd">{el.value}</Text>
-      </Flex>
-    );
+const WeatherInfo = ({ label, value }: WeatherInfoProps) => {
+  return (
+    <Flex justifyContent="space-between">
+      <Text as="dt" textTransform="uppercase" fontWeight={700}>
+        {label}
+      </Text>
+      <Text as="dd">{value}</Text>
+    </Flex>
+  );
+};
+
+const Weather = ({
+  data = [],
+  isLoading = false,
+  onReload,
+  ...props
+}: WeatherProps) => {
+  const informations = data.map((element, index) => {
+    return <WeatherInfo key={index} {...element} />;
   });
+
+  if (isLoading) {
+    return (
+      <StyledWeather>
+        <Flex justifyContent="center" alignItems="center" grow={1}>
+          <Ripple />
+        </Flex>
+      </StyledWeather>
+    );
+  }
 
   return (
     <StyledWeather data-testid="weather">
-      <WeatherSide>
+      <Picture>
         <Text>{props.day}</Text>
         <div>
           <Text>{props.city}</Text>
@@ -79,14 +106,14 @@ const Weather = ({ data = [], ...props }: WeatherProps) => {
             {props.description}
           </Text>
         </div>
-      </WeatherSide>
+      </Picture>
 
       <Informations>
         <Flex direction="column" gap="1rem" grow={1}>
           {informations}
         </Flex>
 
-        <Button>Reload Data!</Button>
+        <Button onClick={onReload}>Reload Data!</Button>
       </Informations>
     </StyledWeather>
   );

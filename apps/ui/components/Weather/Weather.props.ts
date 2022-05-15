@@ -3,10 +3,12 @@ export interface WeatherProps {
   city: string;
   temperature: number;
   description: string;
-  data: WeatherInformationProps[];
+  isLoading: boolean;
+  onReload?: () => void;
+  data: WeatherInfoProps[];
 }
 
-export interface WeatherInformationProps {
+export interface WeatherInfoProps {
   label: string;
   value: string;
 }
