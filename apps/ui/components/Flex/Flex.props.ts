@@ -4,6 +4,7 @@ export interface FlexProps extends StyledFlexProps {
 }
 
 export interface StyledFlexProps {
+  grow?: number;
   wrap?: 'nowrap' | 'wrap' | 'wrap-reverse';
   direction?: 'row' | 'row-reverse' | 'column' | 'column-reverse';
   justifyContent?:
