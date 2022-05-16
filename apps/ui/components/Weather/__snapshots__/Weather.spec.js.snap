@@ -25,7 +25,6 @@ exports[`should render correctly 1`] = `
         fontWeight={700}
       >
         25
-        °C
       </p>
       <p
         className="sc-dkzDqf fgcoac"
