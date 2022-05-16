@@ -16,7 +16,7 @@ const useWeatherStack = ({ apiKey, query }: Props) => {
   const fetchWeather = React.useCallback(
     (qs: string) => {
       axios
-        .get('http://api.weatherstack.com/current', {
+        .get('https://api.weatherstack.com/current', {
           params: {
             access_key: apiKey,
             query: qs,
