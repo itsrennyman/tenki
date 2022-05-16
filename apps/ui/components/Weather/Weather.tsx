@@ -62,7 +62,7 @@ const Picture = styled.div`
   }
 `;
 
-const WeatherInfo = ({ label, value }: WeatherInfo) => {
+const Information = ({ label, value }: WeatherInfo) => {
   return (
     <Flex justifyContent="space-between">
       <Text as="dt" textTransform="uppercase" fontWeight={700}>
@@ -102,7 +102,7 @@ const Weather = ({
   const { infos, ...rest } = data;
 
   const informations = infos.map((element, index) => {
-    return <WeatherInfo key={index} {...element} />;
+    return <Information key={index} {...element} />;
   });
 
   return (
