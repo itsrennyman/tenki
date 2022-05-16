@@ -1,14 +1,19 @@
 export interface WeatherProps {
-  day: string;
-  city: string;
-  temperature: number;
-  description: string;
   isLoading: boolean;
+  isError: boolean;
   onReload?: () => void;
-  data: WeatherInfoProps[];
+  data: WeatherData | null;
 }
 
-export interface WeatherInfoProps {
+export interface WeatherData {
+  day: string;
+  city: string;
+  temperature: string;
+  description: string;
+  infos: WeatherInfo[];
+}
+
+export interface WeatherInfo {
   label: string;
-  value: string;
+  value: string | number;
 }

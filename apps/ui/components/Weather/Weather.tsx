@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Flex } from '../Flex';
 import { Ripple } from '../Ripple';
 import { Text } from '../Text';
-import { WeatherInfoProps, WeatherProps } from './Weather.props';
+import { WeatherInfo, WeatherProps } from './Weather.props';
 import { StyledWeather } from './Weather.styled';
 
 const Button = styled.button`
@@ -62,7 +62,7 @@ const Picture = styled.div`
   }
 `;
 
-const WeatherInfo = ({ label, value }: WeatherInfoProps) => {
+const WeatherInfo = ({ label, value }: WeatherInfo) => {
   return (
     <Flex justifyContent="space-between">
       <Text as="dt" textTransform="uppercase" fontWeight={700}>
@@ -74,15 +74,11 @@ const WeatherInfo = ({ label, value }: WeatherInfoProps) => {
 };
 
 const Weather = ({
-  data = [],
+  data,
   isLoading = false,
+  isError = false,
   onReload,
-  ...props
 }: WeatherProps) => {
-  const informations = data.map((element, index) => {
-    return <WeatherInfo key={index} {...element} />;
-  });
-
   if (isLoading) {
     return (
       <StyledWeather>
@@ -93,17 +89,33 @@ const Weather = ({
     );
   }
 
+  if (isError) {
+    return (
+      <StyledWeather>
+        <Flex justifyContent="center" alignItems="center" grow={1}>
+          Impossible to load weather data.
+        </Flex>
+      </StyledWeather>
+    );
+  }
+
+  const { infos, ...rest } = data;
+
+  const informations = infos.map((element, index) => {
+    return <WeatherInfo key={index} {...element} />;
+  });
+
   return (
     <StyledWeather data-testid="weather">
       <Picture>
-        <Text>{props.day}</Text>
+        <Text>{rest.day}</Text>
         <div>
-          <Text>{props.city}</Text>
+          <Text>{rest.city}</Text>
           <Text fontSize="4em" fontWeight={700}>
-            {props.temperature}°C
+            {rest.temperature}
           </Text>
           <Text fontSize="1em" fontWeight={600}>
-            {props.description}
+            {rest.description}
           </Text>
         </div>
       </Picture>
