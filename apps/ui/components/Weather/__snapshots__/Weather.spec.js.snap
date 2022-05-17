@@ -3,6 +3,7 @@
 exports[`should render correctly 1`] = `
 <div
   className="sc-hKMtZM eiqwmw sc-eCYdqJ ktzijR"
+  data-cy="weather"
   data-testid="weather"
 >
   <div
