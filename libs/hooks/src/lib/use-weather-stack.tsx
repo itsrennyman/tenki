@@ -30,7 +30,6 @@ const useWeatherStack = ({ apiKey, query }: Props) => {
           setData(data);
         })
         .catch((err) => {
-          console.log(err);
           setIsError(true);
         });
     },
