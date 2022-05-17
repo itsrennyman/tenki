@@ -81,7 +81,7 @@ const Weather = ({
 }: WeatherProps) => {
   if (isLoading) {
     return (
-      <StyledWeather>
+      <StyledWeather data-cy="loading">
         <Flex justifyContent="center" alignItems="center" grow={1}>
           <Ripple />
         </Flex>
@@ -91,7 +91,7 @@ const Weather = ({
 
   if (isError) {
     return (
-      <StyledWeather>
+      <StyledWeather data-cy="error">
         <Flex justifyContent="center" alignItems="center" grow={1}>
           Impossible to load weather data.
         </Flex>
@@ -106,7 +106,7 @@ const Weather = ({
   });
 
   return (
-    <StyledWeather data-testid="weather">
+    <StyledWeather data-testid="weather" data-cy="weather">
       <Picture>
         <Text>{rest.day}</Text>
         <div>

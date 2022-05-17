@@ -22,4 +22,5 @@ jobs:
       - run: npx nx format:check
       - run: npx nx affected --target=lint
       - run: npx nx affected --target=test --ci --code-coverage
+      - run: npx nx affected --target=e2e --ci --code-coverage
       - run: npx nx affected --target=build
