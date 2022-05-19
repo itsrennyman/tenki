@@ -9,16 +9,25 @@ exports[`should render correctly 1`] = `
   <div
     className="sc-iBkjds iJWbDD"
   >
-    <p
-      className="sc-dkzDqf cqLQeI"
+    <div
+      className="sc-bczRLJ bDDrHP"
+      direction="column"
     >
-      Monday
-    </p>
-    <div>
       <p
         className="sc-dkzDqf cqLQeI"
       >
-        Milan, Italy
+        Monday
+      </p>
+    </div>
+    <div>
+      <p
+        className="sc-dkzDqf fhmgnY"
+        fontSize="0.9em"
+      >
+        Milan
+         (
+        Italy
+        )
       </p>
       <p
         className="sc-dkzDqf brehns"
@@ -137,7 +146,7 @@ exports[`should render correctly 1`] = `
     <button
       className="sc-jSMfEi PCDIE"
     >
-      Reload Data!
+      Another Place!
     </button>
   </div>
 </div>

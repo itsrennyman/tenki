@@ -9,6 +9,7 @@ const normalize = (data: WeatherApiResponse) => {
   return {
     day: currentDay,
     city: location.name,
+    country: location.country,
     temperature: `${current.temp_c}°C`,
     description: current.condition.text,
     infos: [

@@ -77,7 +77,7 @@ const Weather = ({
   data,
   isLoading = false,
   isError = false,
-  onReload,
+  onPlaceChange,
 }: WeatherProps) => {
   if (isLoading) {
     return (
@@ -108,9 +108,13 @@ const Weather = ({
   return (
     <StyledWeather data-testid="weather" data-cy="weather">
       <Picture>
-        <Text>{rest.day}</Text>
+        <Flex direction="column" gap="5px">
+          <Text>{rest.day}</Text>
+        </Flex>
         <div>
-          <Text>{rest.city}</Text>
+          <Text fontSize="0.9em">
+            {rest.city} ({rest.country})
+          </Text>
           <Text fontSize="4em" fontWeight={700}>
             {rest.temperature}
           </Text>
@@ -125,7 +129,7 @@ const Weather = ({
           {informations}
         </Flex>
 
-        <Button onClick={onReload}>Reload Data!</Button>
+        <Button onClick={onPlaceChange}>Another Place!</Button>
       </Informations>
     </StyledWeather>
   );

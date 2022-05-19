@@ -29,7 +29,7 @@ it('should display the weather component', () => {
   cy.get('[data-cy=weather]').should('be.visible');
 
   cy.contains('Monday').should('be.visible');
-  cy.contains('London').should('be.visible');
+  cy.contains('London (United Kingdom)').should('be.visible');
   cy.contains('17°C').should('be.visible');
   cy.contains('Partly cloudy').should('be.visible');
   cy.contains('Wind Speed').should('be.visible');

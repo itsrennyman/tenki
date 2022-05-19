@@ -1,13 +1,14 @@
 export interface WeatherProps {
   isLoading: boolean;
   isError: boolean;
-  onReload?: () => void;
+  onPlaceChange?: () => void;
   data: WeatherData | null;
 }
 
 export interface WeatherData {
   day: string;
   city: string;
+  country: string;
   temperature: string;
   description: string;
   infos: WeatherInfo[];

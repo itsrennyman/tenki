@@ -15,6 +15,8 @@ const useWeatherApi = ({ apiKey, query }: Props) => {
 
   const fetchWeather = React.useCallback(
     (qs: string) => {
+      setData(null);
+
       axios
         .get('https://api.weatherapi.com/v1/current.json', {
           params: {
