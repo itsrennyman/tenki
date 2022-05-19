@@ -1,6 +1,6 @@
-import { WeatherStackResponse } from '@tenki/hooks';
+import { WeatherApiResponse } from '@tenki/hooks';
 
-const normalize = (data: WeatherStackResponse) => {
+const normalize = (data: WeatherApiResponse) => {
   const { location, current } = data;
   const currentDay = new Date().toLocaleDateString('en-EN', {
     weekday: 'long',
@@ -9,15 +9,15 @@ const normalize = (data: WeatherStackResponse) => {
   return {
     day: currentDay,
     city: location.name,
-    temperature: `${current.temperature}°C`,
-    description: current.weather_descriptions[0],
+    temperature: `${current.temp_c}°C`,
+    description: current.condition.text,
     infos: [
-      { label: 'Wind Speed', value: `${current.wind_speed} km/h` },
+      { label: 'Wind Speed', value: `${current.wind_kph} km/h` },
       { label: 'Wind Direction', value: current.wind_dir },
-      { label: 'UV Index', value: current.uv_index },
+      { label: 'UV Index', value: current.uv },
       { label: 'Humidity', value: `${current.humidity}%` },
-      { label: 'Pressure', value: `${current.pressure} mbar` },
-      { label: 'Visibility', value: `${current.visibility} km` },
+      { label: 'Pressure', value: `${current.pressure_mb}mb` },
+      { label: 'Visibility', value: `${current.vis_km}km` },
     ],
   };
 };
