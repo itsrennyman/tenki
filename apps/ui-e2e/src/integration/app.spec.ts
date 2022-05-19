@@ -1,7 +1,7 @@
 it('should display the weather component', () => {
-  cy.intercept('http://api.weatherstack.com/current*', {
+  cy.intercept('https://api.weatherapi.com/v1/current.json*', {
     statusCode: 200,
-    fixture: 'weatherstack.json',
+    fixture: 'weatherapi.json',
     delay: 1000,
   }).as('getCurrentWeather');
 
@@ -29,32 +29,30 @@ it('should display the weather component', () => {
   cy.get('[data-cy=weather]').should('be.visible');
 
   cy.contains('Monday').should('be.visible');
-  cy.contains('New York').should('be.visible');
-  cy.contains('13°C').should('be.visible');
-  cy.contains('Sunny').should('be.visible');
+  cy.contains('London').should('be.visible');
+  cy.contains('17°C').should('be.visible');
+  cy.contains('Partly cloudy').should('be.visible');
   cy.contains('Wind Speed').should('be.visible');
-  cy.contains('0 km/h').should('be.visible');
+  cy.contains('15.1 km/h').should('be.visible');
   cy.contains('Wind Direction').should('be.visible');
-  cy.contains('n').should('be.visible');
+  cy.contains('WNW').should('be.visible');
   cy.contains('UV Index').should('be.visible');
-  cy.contains('4').should('be.visible');
+  cy.contains('5').should('be.visible');
   cy.contains('Humidity').should('be.visible');
-  cy.contains('90%').should('be.visible');
+  cy.contains('68%').should('be.visible');
   cy.contains('Pressure').should('be.visible');
-  cy.contains('1010 mbar').should('be.visible');
+  cy.contains('1019mb').should('be.visible');
   cy.contains('Visibility').should('be.visible');
-  cy.contains('16 km').should('be.visible');
+  cy.contains('10km').should('be.visible');
 });
 
 it('should display an error message when the call return an error', () => {
-  cy.intercept('http://api.weatherstack.com/current*', {
-    statusCode: 200,
+  cy.intercept('https://api.weatherapi.com/v1/current.json*', {
+    statusCode: 400,
     body: {
-      success: false,
       error: {
-        code: 104,
-        type: 'usage_limit_reached',
-        info: 'Your monthly usage limit has been reached. Please upgrade your Subscription Plan.',
+        code: 2006,
+        message: 'API key is invalid.',
       },
     },
     delay: 1000,
