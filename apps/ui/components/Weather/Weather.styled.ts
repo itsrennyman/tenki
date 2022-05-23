@@ -1,13 +1,15 @@
 import styled from 'styled-components';
-import { Card } from '../Card';
 
-const StyledWeather = styled(Card)`
+const StyledWeather = styled.div`
+  border-radius: 25px;
+  box-shadow: 0 0 70px -10px rgb(0 0 0 / 20%);
+  background-color: #222831;
+  color: #ffffff;
+  height: 400px;
   display: flex;
   flex: 1;
   justify-content: space-between;
   max-width: 600px;
-
-  // Overrides
   padding: 0;
 `;
 

@@ -2,12 +2,12 @@
 
 exports[`should render correctly 1`] = `
 <div
-  className="sc-hKMtZM eiqwmw sc-eCYdqJ ktzijR"
+  className="sc-hKMtZM icSPLN"
   data-cy="weather"
   data-testid="weather"
 >
   <div
-    className="sc-gKXOVf faSDAV"
+    className="sc-jSMfEi hLPZPo"
   >
     <div
       className="sc-gsnTZi hOwYUh"
@@ -46,7 +46,7 @@ exports[`should render correctly 1`] = `
     </div>
   </div>
   <div
-    className="sc-jSMfEi eAoqHI"
+    className="sc-eCYdqJ kPiuaO"
   >
     <div
       className="sc-gsnTZi gdwgre"
