@@ -1,10 +1,10 @@
+import React from 'react';
 import { StyledCard } from './Card.styled';
 
-interface Props {
-  children: React.ReactNode;
-}
-
-const Card = ({ children, ...props }: Props) => {
+const Card = ({
+  children,
+  ...props
+}: React.ComponentPropsWithoutRef<'div'>) => {
   return <StyledCard {...props}>{children}</StyledCard>;
 };
 
