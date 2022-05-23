@@ -7,10 +7,10 @@ exports[`should render correctly 1`] = `
   data-testid="weather"
 >
   <div
-    className="sc-iBkjds iJWbDD"
+    className="sc-gKXOVf faSDAV"
   >
     <div
-      className="sc-bczRLJ bDDrHP"
+      className="sc-gsnTZi hOwYUh"
       direction="column"
     >
       <p
@@ -46,14 +46,14 @@ exports[`should render correctly 1`] = `
     </div>
   </div>
   <div
-    className="sc-gKXOVf OOeIB"
+    className="sc-jSMfEi eAoqHI"
   >
     <div
-      className="sc-bczRLJ dWSqhE"
+      className="sc-gsnTZi gdwgre"
       direction="column"
     >
       <div
-        className="sc-bczRLJ kwAZZz"
+        className="sc-gsnTZi iydxnJ"
       >
         <dt
           className="sc-dkzDqf gHxGtr"
@@ -68,7 +68,7 @@ exports[`should render correctly 1`] = `
         </dd>
       </div>
       <div
-        className="sc-bczRLJ kwAZZz"
+        className="sc-gsnTZi iydxnJ"
       >
         <dt
           className="sc-dkzDqf gHxGtr"
@@ -83,7 +83,7 @@ exports[`should render correctly 1`] = `
         </dd>
       </div>
       <div
-        className="sc-bczRLJ kwAZZz"
+        className="sc-gsnTZi iydxnJ"
       >
         <dt
           className="sc-dkzDqf gHxGtr"
@@ -98,7 +98,7 @@ exports[`should render correctly 1`] = `
         </dd>
       </div>
       <div
-        className="sc-bczRLJ kwAZZz"
+        className="sc-gsnTZi iydxnJ"
       >
         <dt
           className="sc-dkzDqf gHxGtr"
@@ -113,7 +113,7 @@ exports[`should render correctly 1`] = `
         </dd>
       </div>
       <div
-        className="sc-bczRLJ kwAZZz"
+        className="sc-gsnTZi iydxnJ"
       >
         <dt
           className="sc-dkzDqf gHxGtr"
@@ -128,7 +128,7 @@ exports[`should render correctly 1`] = `
         </dd>
       </div>
       <div
-        className="sc-bczRLJ kwAZZz"
+        className="sc-gsnTZi iydxnJ"
       >
         <dt
           className="sc-dkzDqf gHxGtr"
@@ -144,7 +144,7 @@ exports[`should render correctly 1`] = `
       </div>
     </div>
     <button
-      className="sc-jSMfEi PCDIE"
+      className="sc-bczRLJ cSwXxl"
     >
       Another Place!
     </button>
