@@ -1,7 +1,6 @@
-import React from 'react';
 import styled from 'styled-components';
 
-const StyledPicture = styled.div`
+const StyledWeatherPicture = styled.div`
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -24,11 +23,4 @@ const StyledPicture = styled.div`
   }
 `;
 
-const WeatherPicture = ({
-  children,
-  ...props
-}: React.ComponentPropsWithoutRef<'div'>) => {
-  return <StyledPicture {...props}>{children}</StyledPicture>;
-};
-
-export { WeatherPicture };
+export { StyledWeatherPicture as WeatherPicture };

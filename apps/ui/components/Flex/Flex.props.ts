@@ -1,8 +1,3 @@
-export interface FlexProps extends StyledFlexProps {
-  as?: React.ElementType;
-  children: React.ReactNode;
-}
-
 export interface StyledFlexProps {
   grow?: number;
   wrap?: 'nowrap' | 'wrap' | 'wrap-reverse';
